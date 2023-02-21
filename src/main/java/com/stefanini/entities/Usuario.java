@@ -26,10 +26,12 @@ public class Usuario {
     private String email;
     @NotBlank
     private String senha;
+    @Column(name = "data_nascimento")
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataNascimento;
-
+    @Column(name = "data_criacao")
     private LocalDateTime dataCriacao;
+    @Column(name = "data_atualizacao")
     private LocalDateTime dataAtualizacao;
 
     public Usuario(Long id, String nome, String login, String email, String senha, LocalDate dataNascimento, LocalDateTime dataCriacao, LocalDateTime dataAtualizacao) {
